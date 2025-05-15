@@ -14410,7 +14410,7 @@ Detailed datasets info and tasks description is provided below.</p>
     <span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s2">&quot;spark.driver.bindAddress&quot;</span><span class="p">,</span> <span class="s2">&quot;0.0.0.0&quot;</span><span class="p">)</span>
     
     <span class="c1"># How many CPU cores allocate to driver process</span>
-    <span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s2">&quot;spark.driver.cores&quot;</span><span class="p">,</span> <span class="s2">&quot;2&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s2">&quot;spark.driver.cores&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">)</span>
     
     <span class="c1"># How many RAM allocate to driver process</span>
     <span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s2">&quot;spark.driver.memory&quot;</span><span class="p">,</span> <span class="s2">&quot;4g&quot;</span><span class="p">)</span>
@@ -14420,13 +14420,14 @@ Detailed datasets info and tasks description is provided below.</p>
     
     <span class="c1"># How many CPU cores allocate to each executor</span>
     <span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s2">&quot;spark.executor.cores&quot;</span><span class="p">,</span> <span class="s1">&#39;2&#39;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s2">&quot;spark.kubernetes.executor.request.cores&quot;</span><span class="p">,</span> <span class="s1">&#39;0.1&#39;</span><span class="p">)</span>
     
     <span class="c1"># How many RAM allocate to each executor</span>
     <span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s2">&quot;spark.executor.memory&quot;</span><span class="p">,</span> <span class="s2">&quot;4g&quot;</span><span class="p">)</span>
     
     <span class="c1"># How many extra RAM allocate to each executor pod to handle with JVM overheads</span>
     <span class="c1"># Total pod RAM = &#39;spark.executor.memory&#39; + (&#39;spark.executor.memory&#39; * &#39;spark.kubernetes.memoryOverheadFactor&#39;)</span>
-    <span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s2">&quot;spark.kubernetes.memoryOverheadFactor&quot;</span><span class="p">,</span> <span class="s2">&quot;0.2&quot;</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s2">&quot;spark.kubernetes.memoryOverheadFactor&quot;</span><span class="p">,</span> <span class="s2">&quot;0.1&quot;</span><span class="p">)</span>
     
     <span class="c1"># How many RAM from the pool allocate to store the data</span>
     <span class="c1"># Additional info: https://spark.apache.org/docs/latest/tuning.html#memory-management-overview</span>
